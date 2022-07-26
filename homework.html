@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>HYPEBEAST</title>
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .positionrelative {
+            display: flex;
+            position: relative;
+        }
+
+        .positionabsolute {
+            display: flex;
+            position: absolute;
+        }
+
+        .centercenter {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #888888;
+        }
+
+        .borderring {
+            border: 1px solid #888888;
+        }
+
+        body {
+            background-color: #222;
+            color: aliceblue;
+            /* width: 100%; */
+        }
+
+        /* margin-------------------------------------------- */
+        .marginauto {
+            margin: 0 auto;
+        }
+
+        .marginleft20 {
+            margin-left: 20px;
+        }
+
+        /* fontsize ----------------------------------*/
+        .fontsize20 {
+            font-size: 20px;
+        }
+
+        .fontsize19 {
+            font-size: 19px;
+        }
+
+        .fontsize18 {
+            font-size: 18px;
+        }
+
+        .fontsize17 {
+            font-size: 17px;
+        }
+
+        .fontsize16 {
+            font-size: 16px;
+        }
+
+        .fontsize15 {
+            font-size: 15px;
+        }
+
+        .fontsize14 {
+            font-size: 14px;
+        }
+
+        .fontsize13 {
+            font-size: 13px;
+        }
+
+        .fontsize12 {
+            font-size: 12px;
+        }
+
+        .fontsize11 {
+            font-size: 11px;
+        }
+
+        /* fontsize ----------------------------------*/
+        /* color---------------------------------------- */
+        .colorgray {
+            color: #888888;
+        }
+
+        .colorwhite {
+            color: #eeeeee;
+        }
+
+        .colorblack {
+            color: black;
+        }
+
+        /* color---------------------------------------- */
+        /* displayflex --------------------------------------*/
+        .displayflex {
+            display: flex;
+        }
+
+        .displayauto {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+        }
+
+        /* displayflex --------------------------------------*/
+
+        /* padding: --------------------------------- */
+        .all-block {
+            padding: 0 15px;
+        }
+
+        .navpadding {
+            padding: 0 15px;
+        }
+
+        .padding20_0_40_15 {
+            padding: 20px 0 40px 15px;
+        }
+
+        .paddingright24 {
+            padding-right: 24px;
+        }
+
+        .paddingright15 {
+            padding-right: 15px;
+        }
+
+        .paddingright12 {
+            padding-right: 12px;
+        }
+
+        .paddingright10 {
+            padding-right: 10px;
+        }
+
+        .padding0_20 {
+            padding: 0 20px;
+        }
+
+        .paddingbottom10 {
+            padding-bottom: 10px;
+        }
+
+        .paddingbottom15 {
+            padding-bottom: 15px;
+        }
+
+        .paddingbottom30 {
+            padding-bottom: 30px;
+        }
+
+        .paddingtop20bottom10 {
+            padding: 20px 0 10px 0;
+        }
+
+        /* padding: --------------------------------- */
+        /* text-align: center----------------- */
+        .textaligncenter {
+            text-align: center;
+        }
+
+        /* text-align: center----------------- */
+        /* lineheight--------------------- */
+        .lineheight48 {
+            line-height: 48px;
+        }
+
+        .lineheight35 {
+            line-height: 35px;
+        }
+
+        .lineheight30 {
+            line-height: 30px;
+        }
+
+        .lineheight20 {
+            line-height: 20px;
+        }
+
+        /* lineheight--------------------- */
+
+        /* first section---------手機-------------------------- */
+        nav {
+            /* width: 375px; */
+            width: 100%;
+            height: 60px;
+            background-color: #222;
+            position: fixed;
+            /* padding-left: 15px; */
+            /* padding-right: 15px; */
+            display: flex;
+            align-items: center;
+            z-index: 1;
+            border-bottom: 1px solid #888888;
+        }
+
+        .nav-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .contentlogo {
+            display: flex;
+            padding-right: 80px;
+            /* width: 80%; */
+            /* align-items: flex-end ; */
+        }
+
+        .icon-content {
+            font-size: 24px;
+            color: aliceblue;
+            /* line-height: 60px; */
+            padding-right: 20px;
+            /* align-items: center; */
+        }
+
+        .logo {
+            width: 160px;
+            height: 20px;
+            /* background-color: #222; */
+            /* line-height: 60px; */
+            /* margin-right: 24%; */
+            /* margin-right: 50px; */
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .shopserch {
+            display: flex;
+            /* width: 20%; */
+            /* align-items: flex-end ; */
+        }
+
+        .shop {
+            color: aliceblue;
+            /* line-height: 60px; */
+            margin-right: 15px;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+        }
+
+        .icon-serch {
+            font-size: 20px;
+            color: aliceblue;
+            /* margin-right: 20%; */
+            /* line-height: 60px; */
+        }
+
+        .major-m-block-img {
+            width: 100%;
+            /* height: 250px; */
+        }
+
+        .major-m-block-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .main-container {
+            padding-top: 60px;
+            position: relative;
+        }
+
+        .major-m-block-text p {
+            color: aliceblue;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .major-m-block-text {
+            padding: 15px 10px;
+            position: absolute;
+            width: 90%;
+            background-color: #222;
+            text-align: center;
+            /* right: 100px; */
+            right: 50%;
+            transform: translate(50%, -25%);
+
+            /* transform: translate(300px, 300px); */
+        }
+
+        /* secend section  */
+        .secend-container {
+            margin-top: 25%;
+            text-align: center;
+            font-weight: 500;
+            font-size: 14px;
+            width: 100%;
+            display: flex;
+        }
+
+        .secend-container-img {
+            width: 100%;
+            /* height: 111px; */
+        }
+
+        .secend-container-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .secend-container p {
+            color: aliceblue;
+        }
+
+        .secend-container-L {
+            flex: 1;
+            margin: 0 2% 0 0;
+        }
+
+        .secend-container-R {
+            flex: 1;
+            margin: 0 0 0 2%;
+        }
+
+        /* third section */
+
+        .third-container-title {
+            margin-top: 5%;
+            padding: 10px 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .third-container-img {
+            width: 65%;
+            padding-right: 5%;
+        }
+
+        .third-container-block {
+            padding-top: 4%;
+            padding-bottom: 4%;
+            display: flex;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .more-text {
+            text-align: center;
+            margin: 4% 0;
+            font-size: 14px;
+        }
+
+        /* fourth section */
+
+        .fourth-container-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 3%;
+            border-bottom: 1px solid #888888;
+        }
+
+        .fourth-container-title-number {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0px;
+            border-bottom: 1px solid #888888;
+            /* line-height: 56px; */
+        }
+
+        .fourth-container-title-number-img {
+            width: 100%;
+            height: 100%;
+            /* border-radius: 50%; */
+        }
+
+        .circle-brand {
+            border-radius: 50%;
+            width: 24px;
+            border: 1px solid #444;
+            overflow: hidden;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fourth-container-title-leftblock {
+            display: flex;
+            line-height: 30px;
+        }
+
+        .fourth-container-title-leftblock h3 {
+            padding-right: 14px;
+        }
+
+        .fourth-container-title-leftblock p {
+            padding-right: 10px;
+        }
+
+        .fourth-container-title-rightblock {
+            display: flex;
+            line-height: 30px;
+        }
+
+        .fourth-container-title-rightblock p {
+            padding-left: 14px;
+        }
+
+        /* fifth section */
+
+
+        .fifth-container-title {
+            display: flex;
+            /* justify-content: space-around; */
+            width: 100%;
+            line-height: 54px;
+            border-bottom: 1px solid #888888;
+        }
+
+        .fifth-container-title-spacebetween {
+            width: 33%;
+        }
+
+        .border-bottom-wide {
+            border-bottom: 3px solid #eeeeee;
+        }
+
+        .fifth-container-fourth-littletitle {
+            width: 100%;
+        }
+
+        .fifth-container-fourth-littletitle-left {
+            width: 20%;
+            margin-right: 10px;
+        }
+
+        .fifth-container-fourth-littletitle-middle {
+            width: 20%;
+        }
+
+        .fifth-container-fourth-littletitle-right {
+            width: 60%;
+            text-align: right;
+        }
+
+        /* sixth section */
+        .sixth-container-title {
+            display: flex;
+            /* line-height: 35px; */
+            /* position: relative; */
+            padding-bottom: 10px;
+        }
+
+        .sixth-container-block {
+            overflow-x: auto;
+        }
+
+        .sixth-container-block-img {
+            width: 150px;
+            /* height: 195px; */
+        }
+
+        .readmoreicon {
+            display: flex;
+            align-items: flex-end;
+            /* position: absolute; */
+            /* bottom: 0px; */
+            /* right:1px; */
+            /* padding-left: 50px; */
+        }
+
+        .space-block {
+            border-bottom: 1px solid #888888;
+            border-top: 1px solid #888888;
+            height: 50px;
+        }
+
+        /*  ninth section  */
+        .loadmore {
+            margin: 20px 0 30px 0;
+        }
+
+        /* tenth section */
+        .tenth-container {
+            background-color: black;
+            padding-top: 10px;
+        }
+
+        .tenth-container-sort {
+            border-top: 1px solid #888888;
+            display: flex;
+            line-height: 50px;
+            justify-content: space-between;
+        }
+
+        /* footer section */
+        .footerblock {
+            background-color: black;
+            border-top: 1px solid #888888;
+            padding: 20px 0;
+        }
+
+        /* ----------------------------------------- */
+        .desktopshop {
+            display: none;
+        }
+
+        .desktopblock2 {
+            display: none;
+        }
+
+        .desktopblock {
+            /* display: flex; */
+            display: none;
+        }
+
+        .desktopblock :nth-child(1) {
+            order: 2;
+        }
+
+        .desktopblock :nth-child(2) {
+            order: 3;
+        }
+
+        .desktopblock :nth-child(3) {
+            order: 1;
+        }
+
+        .desktop-tenth-container {
+            display: none;
+        }
+
+        .footerblock-2 {
+            display: flex;
+            /* text-align: center; */
+            padding: 0 35px;
+        }
+
+
+
+
+        /* first section---------桌機*/
+
+        @media screen and (min-width: 500px) {
+            
+
+            .desktopshop {
+                display: block;
+                display: flex;
+            }
+
+            .cellphoneblock {
+                display: none;
+            }
+
+            .all-block {
+                padding-left: 200px;
+                padding-right: 500px;
+            }
+
+
+            .shop_ {
+                display: none;
+            }
+
+            .desktopblock {
+                width: 100%;
+                padding-left: 200px;
+                padding-right: 200px;
+                padding-top: 50px;
+                display: flex;
+            }
+
+            .main-container {
+                width: 50%;
+                border-left: 1px solid #888888;
+                border-right: 1px solid #888888;
+                padding: 0 30px;
+                margin-top: 40px;
+                /* font-size: 28px; */
+                /* position: static; */
+
+            }
+
+            .major-m-block {
+                font-size: 28px;
+            }
+
+            .secend-container {
+                width: 20%;
+                padding: 0px;
+                margin: 0px;
+
+                display: block;
+
+                margin-top: 40px;
+                padding-left: 30px;
+                font-size: 18px;
+            }
+
+            .third-container {
+                width: 30%;
+                padding: 0px;
+                padding-right: 50px;
+            }
+
+            /* fourth-container------------------ */
+            .fourth-container {
+                margin-top: 90px;
+                display: block;
+            }
+
+            .fourth-container-title {
+                padding: 0px;
+
+
+            }
+
+            .fourth-container-block {
+                display: flex;
+                width: 100%;
+
+            }
+
+            .fourth-container-left {
+                width: 50%;
+                padding-right: 30px;
+            }
+
+            .fourth-container-right {
+                width: 50%;
+                /* padding-top: 12px; */
+            }
+
+            /* fifth-container-title--------- */
+
+            .fifth-container-title {
+                padding-left: 200px;
+                padding-right: 300px;
+            }
+
+            .fifth-container-block {
+                display: flex;
+            }
+
+            .fifth-container-block-right {
+                padding: 40px 0 0 30px;
+                /* height: 100%; */
+
+                /* display: block; */
+            }
+
+            .fifth-container-block-left {
+                width: 55%;
+
+            }
+
+            .fifth-container-block-left-bottom {
+                padding-top: 270px;
+                /* justify-content:space-around */
+            }
+
+            /* sixth-container------------------     */
+            .sixth-container {
+                padding-left: 200px;
+                padding-right: 200px;
+            }
+
+            .sixth-container-title {
+                line-height: 45px;
+            }
+
+            .sixth-container-block-img {
+
+                width: 100%;
+            }
+
+            /* tenth-container----------------- */
+
+            .cellphone-tenth-container {
+                display: none;
+            }
+
+            .desktop-tenth-container {
+                display: block;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                background-color: black;
+                line-height: 20px;
+
+            }
+
+            .tenth-container {
+                display: flex;
+                justify-content: space-between;
+            }
+
+
+            /* footer--------------------- */
+
+            .footerblock {
+                
+                display: flex;
+                justify-content:space-between;
+            }
+
+            .footerblock-1 {
+                display: flex;
+                padding-right: 10px;
+            }
+
+            .footerblock {
+                display: flex;
+                line-height: 30px;
+            }
+
+            .navpadding {
+                padding-left: 200px;
+                padding-right: 200px;
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav -->
+    <nav class="navpadding">
+        <div class="nav-container ">
+            <div class="contentlogo ">
+                <div class="icon-content fa-solid fa-bars"></div>
+                <div class="logo">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/nav/10028.png"
+                        alt="" />
+                </div>
+
+                <div class="desktopshop marginleft20">
+                    <div class="displayflex">
+                        <div class="shop">
+                            <p class="newsicon">最新</p>
+                        </div>
+                        <div class="shop">
+                            <p class="classicon">類別</p>
+                        </div>
+                        <div class="shop">
+                            <p class="brandicon">品牌</p>
+                        </div>
+                        <div class="shop">
+                            <p class="brandicon">商店</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shopserch">
+                <div class="desktopshop">
+                    <div class="shop">
+                        <p class="focuson">關注</p>
+                    </div>
+                    <div class="shop">
+                        <p class="lightanddark">
+                            <i class="fa-regular fa-sun"></i>
+                        </p>
+                    </div>
+                    <div class="shop">
+                        <p class="language">
+                            <i class="fa-solid fa-earth-asia"></i>
+                        </p>
+                    </div>
+                    <div class="shop">
+                        <p class="member">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="shop_">
+                    <div class="shop">
+                        <p>商店</p>
+                    </div>
+                </div>
+                <div class="icon-serch">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- 桌機第一區塊------------------------->
+    <section class="desktopblock">
+        <!--first section -->
+        <section class="main-container">
+            <div class="major-m-block">
+                <div class="major-m-block-img">
+                    <img
+                        src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/main/1.jpg" />
+                </div>
+            </div>
+            <div class="major-m-block-text">
+                <p>
+                    New Balance MADE in USA 新任創意總監 Teddy Santis
+                    正式發佈首個系列
+                </p>
+            </div>
+        </section>
+        <!------- secend section -->
+
+        <section class="secend-container all-block">
+            <div class="secend-container-L">
+                <div class="secend-container-img">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/secend/1.jpg"
+                        alt="" />
+                </div>
+                <p>NEIGHBORHOOD 最新戶外露營用具系列正式登場</p>
+            </div>
+            <div class="secend-container-R">
+                <div class="secend-container-img">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/secend/2.jpg"
+                        alt="" />
+                </div>
+                <p>and wander 最新系列商品正式登陸 HBX</p>
+            </div>
+        </section>
+        <!-- third section-->
+        <section class="third-container all-block">
+            <div class="third-container-title border-bottom">
+                <h3>熱門文章</h3>
+            </div>
+            <div class="third-container-block border-bottom">
+                <div class="third-container-img">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/third/1.jpg"
+                        alt="" />
+                </div>
+                <p>
+                    深陷離婚官司的 Johnny Depp 改口希望回歸 Disney
+                    出演《Pirates of the Caribbean》
+                </p>
+            </div>
+            <div class="third-container-block border-bottom">
+                <div class="third-container-img">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/third/2.jpg"
+                        alt="" />
+                </div>
+                <p>
+                    深陷離婚官司的 Johnny Depp 改口希望回歸 Disney
+                    出演《Pirates of the Caribbean》
+                </p>
+            </div>
+            <div class="third-container-block border-bottom">
+                <div class="third-container-img">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/third/3.jpg"
+                        alt="" />
+                </div>
+                <p>
+                    深陷離婚官司的 Johnny Depp 改口希望回歸 Disney
+                    出演《Pirates of the Caribbean》
+                </p>
+            </div>
+            <div class="more-text">
+                <p>閱讀更多 <i class="fa-solid fa-angle-down"></i></p>
+            </div>
+        </section>
+    </section>
+
+    <!-- 手機第一區------------------- -->
+    <section class="cellphoneblock">
+        <!--first section 手機-->
+        <section class="main-container">
+            <div class="major-m-block-img">
+                <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/main/1.jpg" />
+            </div>
+            <div class="major-m-block-text">
+                <p>
+                    New Balance MADE in USA 新任創意總監 Teddy Santis
+                    正式發佈首個系列
+                </p>
+            </div>
+        </section>
+        <!------- secend section -->
+        <section class="secend-container all-block">
+            <div class="secend-container-L">
+                <div class="secend-container-img">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/secend/1.jpg"
+                        alt="" />
+                </div>
+                <p>NEIGHBORHOOD 最新戶外露營用具系列正式登場</p>
+            </div>
+            <div class="secend-container-R">
+                <div class="secend-container-img">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/secend/2.jpg"
+                        alt="" />
+                </div>
+                <p>and wander 最新系列商品正式登陸 HBX</p>
+            </div>
+        </section>
+        <!-- third section-->
+        <section class="third-container all-block">
+            <div class="third-container-title border-bottom">
+                <h3>熱門文章</h3>
+            </div>
+            <div class="third-container-block border-bottom">
+                <div class="third-container-img">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/third/1.jpg"
+                        alt="" />
+                </div>
+                <p>
+                    深陷離婚官司的 Johnny Depp 改口希望回歸 Disney
+                    出演《Pirates of the Caribbean》
+                </p>
+            </div>
+            <div class="third-container-block border-bottom">
+                <div class="third-container-img">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/third/2.jpg"
+                        alt="" />
+                </div>
+                <p>
+                    深陷離婚官司的 Johnny Depp 改口希望回歸 Disney
+                    出演《Pirates of the Caribbean》
+                </p>
+            </div>
+            <div class="third-container-block border-bottom">
+                <div class="third-container-img">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/third/3.jpg"
+                        alt="" />
+                </div>
+                <p>
+                    深陷離婚官司的 Johnny Depp 改口希望回歸 Disney
+                    出演《Pirates of the Caribbean》
+                </p>
+            </div>
+            <div class="more-text">
+                <p>閱讀更多 <i class="fa-solid fa-angle-down"></i></p>
+            </div>
+        </section>
+    </section>
+    <!-- 手機第二區----------------------- -->
+    <!-- fourth section -->
+    <section class="cellphoneblock">
+        <section class="fourth-container  all-block">
+            <div class="fourth-container-title">
+                <div class="fourth-container-title-leftblock">
+                    <div>
+                        <h3 class="fontsize16">品牌排名</h3>
+                    </div>
+                    <div>
+                        <p class="fontsize12">
+                            <span class="border-bottom">1M</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="fontsize12 colorgray">6M</p>
+                    </div>
+                    <div>
+                        <p class="fontsize12 colorgray">1Y</p>
+                    </div>
+                </div>
+                <div class="fourth-container-title-rightblock fontsize12 colorgray">
+                    <p>動向</p>
+                    <p>先前名次</p>
+                </div>
+            </div>
+            <div class="fourth-container-title-number colorgray">
+                <div class="fourth-container-title-number-left displayflex">
+                    <div class="paddingright24 fontsize18">
+                        <p>1</p>
+                    </div>
+                    <div class="paddingright12">
+                        <div class="circle-brand">
+                            <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fourth/1.jpeg"
+                                alt="" />
+                        </div>
+                    </div>
+                    <div class="colorwhite fontsize14 displayauto">
+                        <p>Nike</p>
+                    </div>
+                </div>
+                <div class="fourth-container-title-number-right displayflex">
+                    <div class="padding0_20 fontsize12">
+                        <p>-</p>
+                    </div>
+                    <div class="padding0_20 fontsize12">
+                        <p>1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fourth-container-title-number colorgray">
+                <div class="fourth-container-title-number-left displayflex">
+                    <div class="paddingright24 fontsize18">
+                        <p>2</p>
+                    </div>
+                    <div class="paddingright12">
+                        <div class="circle-brand">
+                            <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fourth/2.jpeg"
+                                alt="" />
+                        </div>
+                    </div>
+                    <div class="colorwhite fontsize14 displayauto">
+                        <p>New Balance</p>
+                    </div>
+                </div>
+                <div class="fourth-container-title-number-right displayflex">
+                    <div class="padding0_20 fontsize12">
+                        <p>-</p>
+                    </div>
+                    <div class="padding0_20 fontsize12">
+                        <p>2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fourth-container-title-number colorgray">
+                <div class="fourth-container-title-number-left displayflex">
+                    <div class="paddingright24 fontsize18">
+                        <p>3</p>
+                    </div>
+                    <div class="paddingright12">
+                        <div class="circle-brand">
+                            <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fourth/3.jpeg"
+                                alt="" />
+                        </div>
+                    </div>
+                    <div class="colorwhite fontsize14 displayauto">
+                        <p>Vans</p>
+                    </div>
+                </div>
+                <div class="fourth-container-title-number-right displayflex">
+                    <div class="padding0_20 fontsize12">
+                        <p>-</p>
+                    </div>
+                    <div class="padding0_20 fontsize12">
+                        <p>3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="more-text paddingbottom15">
+                <p>閱讀更多 <i class="fa-solid fa-angle-down"></i></p>
+            </div>
+        </section>
+    </section>
+    <!-- 桌機第二區---------------------- -->
+    <!-- fourth section -->
+    <section>
+        <section class="fourth-container desktopblock2 all-block">
+
+
+            <div class="fourth-container-block">
+                <div class="fourth-container-left">
+                    <div class="fourth-container-title">
+                        <div class="fourth-container-title-leftblock">
+                            <div>
+                                <h3 class="fontsize16">品牌排名</h3>
+                            </div>
+                            <div>
+                                <p class="fontsize12">
+                                    <span class="border-bottom">1M</span>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="fontsize12 colorgray">6M</p>
+                            </div>
+                            <div>
+                                <p class="fontsize12 colorgray">1Y</p>
+                            </div>
+                        </div>
+
+                        <div class="fourth-container-title-rightblock fontsize12 colorgray">
+                            <p>動向</p>
+                            <p>先前名次</p>
+                        </div>
+                    </div>
+
+                    <div class="fourth-container-title-number colorgray">
+                        <div class="fourth-container-title-number-left displayflex">
+                            <div class="paddingright24 fontsize18">
+                                <p>1</p>
+                            </div>
+                            <div class="paddingright12">
+                                <div class="circle-brand">
+                                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fourth/1.jpeg"
+                                        alt="" />
+                                </div>
+                            </div>
+                            <div class="colorwhite fontsize14 displayauto">
+                                <p>Nike</p>
+                            </div>
+                        </div>
+                        <div class="fourth-container-title-number-right displayflex">
+                            <div class="padding0_20 fontsize12">
+                                <p>-</p>
+                            </div>
+                            <div class="padding0_20 fontsize12">
+                                <p>1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fourth-container-title-number colorgray">
+                        <div class="fourth-container-title-number-left displayflex">
+                            <div class="paddingright24 fontsize18">
+                                <p>2</p>
+                            </div>
+                            <div class="paddingright12">
+                                <div class="circle-brand">
+                                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fourth/2.jpeg"
+                                        alt="" />
+                                </div>
+                            </div>
+                            <div class="colorwhite fontsize14 displayauto">
+                                <p>New Balance</p>
+                            </div>
+                        </div>
+                        <div class="fourth-container-title-number-right displayflex">
+                            <div class="padding0_20 fontsize12">
+                                <p>-</p>
+                            </div>
+                            <div class="padding0_20 fontsize12">
+                                <p>8</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fourth-container-title-number colorgray">
+                        <div class="fourth-container-title-number-left displayflex">
+                            <div class="paddingright24 fontsize18">
+                                <p>3</p>
+                            </div>
+                            <div class="paddingright12">
+                                <div class="circle-brand">
+                                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fourth/3.jpeg"
+                                        alt="" />
+                                </div>
+                            </div>
+                            <div class="colorwhite fontsize14 displayauto">
+                                <p>Vans</p>
+                            </div>
+                        </div>
+                        <div class="fourth-container-title-number-right displayflex">
+                            <div class="padding0_20 fontsize12">
+                                <p>-</p>
+                            </div>
+                            <div class="padding0_20 fontsize12">
+                                <p>3</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fourth-container-title-number colorgray">
+                        <div class="fourth-container-title-number-left displayflex">
+                            <div class="paddingright24 fontsize18">
+                                <p>4</p>
+                            </div>
+                            <div class="paddingright12">
+                                <div class="circle-brand">
+                                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fourth/4.jpeg"
+                                        alt="" />
+                                </div>
+                            </div>
+                            <div class="colorwhite fontsize14 displayauto">
+                                <p>Vans</p>
+                            </div>
+                        </div>
+                        <div class="fourth-container-title-number-right displayflex">
+                            <div class="padding0_20 fontsize12">
+                                <p>-</p>
+                            </div>
+                            <div class="padding0_20 fontsize12">
+                                <p>7</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fourth-container-title-number colorgray">
+                        <div class="fourth-container-title-number-left displayflex">
+                            <div class="paddingright24 fontsize18">
+                                <p>5</p>
+                            </div>
+                            <div class="paddingright12">
+                                <div class="circle-brand">
+                                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fourth/5.jpeg"
+                                        alt="" />
+                                </div>
+                            </div>
+                            <div class="colorwhite fontsize14 displayauto">
+                                <p>Vans</p>
+                            </div>
+                        </div>
+                        <div class="fourth-container-title-number-right displayflex">
+                            <div class="padding0_20 fontsize12">
+                                <p>-</p>
+                            </div>
+                            <div class="padding0_20 fontsize12">
+                                <p>5</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="fourth-container-right">
+
+                    <div class="fourth-container-title">
+                        <div class="fourth-container-title-leftblock">
+                            <div>
+                                <h3 class="fontsize16"></h3>
+                            </div>
+                            <div>
+                                <p class="fontsize12">
+                                    <span class="border-bottom"></span>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="fontsize12 colorgray"></p>
+                            </div>
+                            <div>
+                                <p class="fontsize12 colorgray"></p>
+                            </div>
+                        </div>
+
+                        <div class="fourth-container-title-rightblock fontsize12 colorgray">
+                            <p>動向</p>
+                            <p>先前名次</p>
+                        </div>
+                    </div>
+                    <div class="fourth-container-title-number colorgray">
+                        <div class="fourth-container-title-number-left displayflex">
+                            <div class="paddingright24 fontsize18">
+                                <p>6</p>
+                            </div>
+                            <div class="paddingright12">
+                                <div class="circle-brand">
+                                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fourth/6.jpeg"
+                                        alt="" />
+                                </div>
+                            </div>
+                            <div class="colorwhite fontsize14 displayauto">
+                                <p>Nike</p>
+                            </div>
+                        </div>
+                        <div class="fourth-container-title-number-right displayflex">
+                            <div class="padding0_20 fontsize12">
+                                <p>-</p>
+                            </div>
+                            <div class="padding0_20 fontsize12">
+                                <p>9</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fourth-container-title-number colorgray">
+                        <div class="fourth-container-title-number-left displayflex">
+                            <div class="paddingright24 fontsize18">
+                                <p>7</p>
+                            </div>
+                            <div class="paddingright12">
+                                <div class="circle-brand">
+                                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fourth/13.jpeg"
+                                        alt="" />
+                                </div>
+                            </div>
+                            <div class="colorwhite fontsize14 displayauto">
+                                <p>New Balance</p>
+                            </div>
+                        </div>
+                        <div class="fourth-container-title-number-right displayflex">
+                            <div class="padding0_20 fontsize12">
+                                <p>-</p>
+                            </div>
+                            <div class="padding0_20 fontsize12">
+                                <p>2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fourth-container-title-number colorgray">
+                        <div class="fourth-container-title-number-left displayflex">
+                            <div class="paddingright24 fontsize18">
+                                <p>8</p>
+                            </div>
+                            <div class="paddingright12">
+                                <div class="circle-brand">
+                                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fourth/11.jpeg"
+                                        alt="" />
+                                </div>
+                            </div>
+                            <div class="colorwhite fontsize14 displayauto">
+                                <p>Vans</p>
+                            </div>
+                        </div>
+                        <div class="fourth-container-title-number-right displayflex">
+                            <div class="padding0_20 fontsize12">
+                                <p>-</p>
+                            </div>
+                            <div class="padding0_20 fontsize12">
+                                <p>4</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fourth-container-title-number colorgray">
+                        <div class="fourth-container-title-number-left displayflex">
+                            <div class="paddingright24 fontsize18">
+                                <p>9</p>
+                            </div>
+                            <div class="paddingright12">
+                                <div class="circle-brand">
+                                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fourth/9.jpeg"
+                                        alt="" />
+                                </div>
+                            </div>
+                            <div class="colorwhite fontsize14 displayauto">
+                                <p>Nike</p>
+                            </div>
+                        </div>
+                        <div class="fourth-container-title-number-right displayflex">
+                            <div class="padding0_20 fontsize12">
+                                <p>-</p>
+                            </div>
+                            <div class="padding0_20 fontsize12">
+                                <p>9</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fourth-container-title-number colorgray">
+                        <div class="fourth-container-title-number-left displayflex">
+                            <div class="paddingright24 fontsize18">
+                                <p>10</p>
+                            </div>
+                            <div class="paddingright12">
+                                <div class="circle-brand">
+                                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fourth/10.jpeg"
+                                        alt="" />
+                                </div>
+                            </div>
+                            <div class="colorwhite fontsize14 displayauto">
+                                <p>Nike</p>
+                            </div>
+                        </div>
+                        <div class="fourth-container-title-number-right displayflex">
+                            <div class="padding0_20 fontsize12">
+                                <p>-</p>
+                            </div>
+                            <div class="padding0_20 fontsize12">
+                                <p>9</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </section>
+    </section>
+
+    <!-- fifth section  -->
+    <div class="fifth-container-title border-bottom textaligncenter">
+        <div class="border-bottom-wide fifth-container-title-spacebetween">
+            <p class="fontsize15">最新</p>
+        </div>
+        <div class="fifth-container-title-spacebetween">
+            <p class="fontsize15">當下人氣</p>
+        </div>
+        <div class="fifth-container-title-spacebetween">
+            <p class="fontsize15">熱門文章</p>
+        </div>
+    </div>
+
+    <section class="fifth-container all-block">
+        <div class="paddingbottom10 border-bottom  fifth-container-block">
+            <div class="paddingtop20bottom10 fifth-container-block-left">
+                <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fifth/1.jpg"
+                    alt="" />
+            </div>
+            <div class="fifth-container-block-right">
+                <div class="fifth-container-block-right-top">
+                    <div>
+                        <h3 class="fontsize19">
+                            Grand Seiko 推出全新「白腹琉璃」主題錶款 SBGW279121231231
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="colorgray fontsize14 lineheight30">
+                            北美地區販售
+                        </p>
+                    </div>
+                </div>
+                <div class="fifth-container-block-left-bottom">
+                    <div class="fifth-container-fourth-littletitle displayflex lineheight30">
+                        <p class="fifth-container-fourth-littletitle-left colorgray fontsize12">
+                            Fashion 時裝
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-middle colorgray fontsize12">
+                            18 分鐘前
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-right colorgray fontsize15">
+                            <span><i class="fa-brands fa-gripfire"></i></span> 0
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="paddingbottom10 border-bottom  fifth-container-block">
+            <div class="paddingtop20bottom10 fifth-container-block-left">
+                <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fifth/2.jpg"
+                    alt="" />
+            </div>
+            <div class="fifth-container-block-right">
+                <div class="fifth-container-block-right-top">
+                    <div>
+                        <h3 class="fontsize19">
+                            Grand Seiko 推出全新「白腹琉璃」主題錶款 SBGW279121231231
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="colorgray fontsize14 lineheight30">
+                            北美地區販售
+                        </p>
+                    </div>
+                </div>
+                <div class="fifth-container-block-left-bottom">
+                    <div class="fifth-container-fourth-littletitle displayflex lineheight30">
+                        <p class="fifth-container-fourth-littletitle-left colorgray fontsize12">
+                            Fashion 時裝
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-middle colorgray fontsize12">
+                            18 分鐘前
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-right colorgray fontsize15">
+                            <span><i class="fa-brands fa-gripfire"></i></span> 0
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="paddingbottom10 border-bottom  fifth-container-block">
+            <div class="paddingtop20bottom10 fifth-container-block-left">
+                <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fifth/3.jpg"
+                    alt="" />
+            </div>
+            <div class="fifth-container-block-right">
+                <div class="fifth-container-block-right-top">
+                    <div>
+                        <h3 class="fontsize19">
+                            Grand Seiko 推出全新「白腹琉璃」主題錶款 SBGW279121231231
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="colorgray fontsize14 lineheight30">
+                            北美地區販售
+                        </p>
+                    </div>
+                </div>
+                <div class="fifth-container-block-left-bottom">
+                    <div class="fifth-container-fourth-littletitle displayflex lineheight30">
+                        <p class="fifth-container-fourth-littletitle-left colorgray fontsize12">
+                            Fashion 時裝
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-middle colorgray fontsize12">
+                            18 分鐘前
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-right colorgray fontsize15">
+                            <span><i class="fa-brands fa-gripfire"></i></span> 0
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- sixth section -->
+    <section class="padding20_0_40_15 sixth-container ">
+        <div class="sixth-container-title">
+            <div class="paddingright12">
+                <h3 class="fontsize20">精選</h3>
+            </div>
+            <div class="readmoreicon">
+                <p class="fontsize13 colorgray">
+                    閱讀更多
+                    <span class="fontsize11"><i class="fa-solid fa-arrow-right"></i></span>
+                </p>
+            </div>
+        </div>
+
+        <div class="sixth-container-block displayflex">
+            <div class="sixth-container-block-lefttoright">
+                <div class="sixth-container-block-img  paddingright15 paddingbottom10">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/clothes/1.jpg"
+                        alt="" />
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">Wacko Maria</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12 colorgray">INCENSE STAND</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">HK$689</p>
+                </div>
+            </div>
+
+            <div class="sixth-container-block-lefttoright">
+                <div class="sixth-container-block-img  paddingright15 paddingbottom10">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/clothes/3.jpg"
+                        alt="" />
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">Wacko Maria</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12 colorgray">INCENSE STAND</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">HK$689</p>
+                </div>
+            </div>
+
+            <div class="sixth-container-block-lefttoright">
+                <div class="sixth-container-block-img  paddingright15 paddingbottom10">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/clothes/4.jpg"
+                        alt="" />
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">Wacko Maria</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12 colorgray">INCENSE STAND</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">HK$689</p>
+                </div>
+            </div>
+
+            <div class="sixth-container-block-lefttoright">
+                <div class="sixth-container-block-img  paddingright15 paddingbottom10">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/clothes/5.jpg"
+                        alt="" />
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">Wacko Maria</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12 colorgray">INCENSE STAND</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">HK$689</p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+    <div class="all-block">
+        <div class="space-block"></div>
+    </div>
+
+    <!-- seventh section -->
+    <section class="fifth-container all-block">
+        <div class="paddingbottom10 border-bottom  fifth-container-block">
+            <div class="paddingtop20bottom10 fifth-container-block-left ">
+                <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fifth/4.jpg"
+                    alt="" />
+            </div>
+            <div class="fifth-container-block-right">
+                <div class="fifth-container-block-right-top">
+                    <div>
+                        <h3 class="fontsize19">
+                            Grand Seiko 推出全新「白腹琉璃」主題錶款 SBGW279121231231
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="colorgray fontsize14 lineheight30">
+                            北美地區販售
+                        </p>
+                    </div>
+                </div>
+                <div class="fifth-container-block-left-bottom">
+                    <div class="fifth-container-fourth-littletitle displayflex lineheight30">
+                        <p class="fifth-container-fourth-littletitle-left colorgray fontsize12">
+                            Fashion 時裝
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-middle colorgray fontsize12">
+                            18 分鐘前
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-right colorgray fontsize15">
+                            <span><i class="fa-brands fa-gripfire"></i></span> 0
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="paddingbottom10 border-bottom  fifth-container-block">
+            <div class="paddingtop20bottom10 fifth-container-block-left">
+                <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fifth/5.jpg"
+                    alt="" />
+            </div>
+            <div class="fifth-container-block-right">
+                <div class="fifth-container-block-right-top">
+                    <div>
+                        <h3 class="fontsize19">
+                            Grand Seiko 推出全新「白腹琉璃」主題錶款 SBGW279121231231
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="colorgray fontsize14 lineheight30">
+                            北美地區販售
+                        </p>
+                    </div>
+                </div>
+                <div class="fifth-container-block-left-bottom">
+                    <div class="fifth-container-fourth-littletitle displayflex lineheight30">
+                        <p class="fifth-container-fourth-littletitle-left colorgray fontsize12">
+                            Fashion 時裝
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-middle colorgray fontsize12">
+                            18 分鐘前
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-right colorgray fontsize15">
+                            <span><i class="fa-brands fa-gripfire"></i></span> 0
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="paddingbottom10 border-bottom  fifth-container-block">
+            <div class="paddingtop20bottom10 fifth-container-block-left">
+                <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fifth/6.jpg"
+                    alt="" />
+            </div>
+            <div class="fifth-container-block-right">
+                <div class="fifth-container-block-right-top">
+                    <div>
+                        <h3 class="fontsize19">
+                            Grand Seiko 推出全新「白腹琉璃」主題錶款 SBGW279121231231
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="colorgray fontsize14 lineheight30">
+                            北美地區販售
+                        </p>
+                    </div>
+                </div>
+                <div class="fifth-container-block-left-bottom">
+                    <div class="fifth-container-fourth-littletitle displayflex lineheight30">
+                        <p class="fifth-container-fourth-littletitle-left colorgray fontsize12">
+                            Fashion 時裝
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-middle colorgray fontsize12">
+                            18 分鐘前
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-right colorgray fontsize15">
+                            <span><i class="fa-brands fa-gripfire"></i></span> 0
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- eighth section -->
+    <section class="padding20_0_40_15 sixth-container ">
+        <div class="sixth-container-title">
+            <div class="paddingright12">
+                <h3 class="fontsize20">精選</h3>
+            </div>
+            <div class="readmoreicon">
+                <p class="fontsize13 colorgray">
+                    閱讀更多
+                    <span class="fontsize11"><i class="fa-solid fa-arrow-right"></i></span>
+                </p>
+            </div>
+        </div>
+
+        <div class="sixth-container-block displayflex">
+            <div class="sixth-container-block-lefttoright">
+                <div class="sixth-container-block-img  paddingright15 paddingbottom10">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/clothes/6.jpg"
+                        alt="" />
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">Wacko Maria</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12 colorgray">INCENSE STAND</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">HK$689</p>
+                </div>
+            </div>
+
+            <div class="sixth-container-block-lefttoright">
+                <div class="sixth-container-block-img  paddingright15 paddingbottom10">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/clothes/7.jpg"
+                        alt="" />
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">Wacko Maria</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12 colorgray">INCENSE STAND</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">HK$689</p>
+                </div>
+            </div>
+
+            <div class="sixth-container-block-lefttoright">
+                <div class="sixth-container-block-img  paddingright15 paddingbottom10">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/clothes/8.jpg"
+                        alt="" />
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">Wacko Maria</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12 colorgray">INCENSE STAND</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">HK$689</p>
+                </div>
+            </div>
+
+            <div class="sixth-container-block-lefttoright">
+                <div class="sixth-container-block-img  paddingright15 paddingbottom10">
+                    <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/clothes/9.jpg"
+                        alt="" />
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">Wacko Maria</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12 colorgray">INCENSE STAND</p>
+                </div>
+                <div class="lineheight20">
+                    <p class="fontsize12">HK$689</p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+    <!-- ninth section -->
+    <section class="fifth-container all-block">
+        <div class="paddingbottom10 border-bottom  fifth-container-block">
+            <div class="paddingtop20bottom10 fifth-container-block-left">
+                <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fifth/7.jpg"
+                    alt="" />
+            </div>
+            <div class="fifth-container-block-right">
+                <div class="fifth-container-block-right-top">
+                    <div>
+                        <h3 class="fontsize19">
+                            Grand Seiko 推出全新「白腹琉璃」主題錶款 SBGW279121231231
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="colorgray fontsize14 lineheight30">
+                            北美地區販售
+                        </p>
+                    </div>
+                </div>
+                <div class="fifth-container-block-left-bottom">
+                    <div class="fifth-container-fourth-littletitle displayflex lineheight30">
+                        <p class="fifth-container-fourth-littletitle-left colorgray fontsize12">
+                            Fashion 時裝
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-middle colorgray fontsize12">
+                            18 分鐘前
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-right colorgray fontsize15">
+                            <span><i class="fa-brands fa-gripfire"></i></span> 0
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="paddingbottom10 border-bottom  fifth-container-block">
+            <div class="paddingtop20bottom10 fifth-container-block-left">
+                <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fifth/8.jpg"
+                    alt="" />
+            </div>
+            <div class="fifth-container-block-right">
+                <div class="fifth-container-block-right-top">
+                    <div>
+                        <h3 class="fontsize19">
+                            Grand Seiko 推出全新「白腹琉璃」主題錶款 SBGW279121231231
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="colorgray fontsize14 lineheight30">
+                            北美地區販售
+                        </p>
+                    </div>
+                </div>
+                <div class="fifth-container-block-left-bottom">
+                    <div class="fifth-container-fourth-littletitle displayflex lineheight30">
+                        <p class="fifth-container-fourth-littletitle-left colorgray fontsize12">
+                            Fashion 時裝
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-middle colorgray fontsize12">
+                            18 分鐘前
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-right colorgray fontsize15">
+                            <span><i class="fa-brands fa-gripfire"></i></span> 0
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="paddingbottom10 border-bottom  fifth-container-block">
+            <div class="paddingtop20bottom10 fifth-container-block-left">
+                <img src="./images/HYPEBEAST._Driving_Culture_ForwardBack_ButtonSearch_IconFilter_Icon/fifth/9.jpg"
+                    alt="" />
+            </div>
+            <div class="fifth-container-block-right">
+                <div class="fifth-container-block-right-top">
+                    <div>
+                        <h3 class="fontsize19">
+                            Grand Seiko 推出全新「白腹琉璃」主題錶款 SBGW279121231231
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="colorgray fontsize14 lineheight30">
+                            北美地區販售
+                        </p>
+                    </div>
+                </div>
+                <div class="fifth-container-block-left-bottom">
+                    <div class="fifth-container-fourth-littletitle displayflex lineheight30">
+                        <p class="fifth-container-fourth-littletitle-left colorgray fontsize12">
+                            Fashion 時裝
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-middle colorgray fontsize12">
+                            18 分鐘前
+                        </p>
+                        <p class="fifth-container-fourth-littletitle-right colorgray fontsize15">
+                            <span><i class="fa-brands fa-gripfire"></i></span> 0
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+    <div class="all-block">
+        <div class="loadmore borderring ">
+            <p class="lineheight48 fontsize14 textaligncenter">加載更多</p>
+        </div>
+    </div>
+
+
+
+
+    <!-- tenth section  手機板  -->
+    <section class="cellphone-tenth-container">
+        <section class="tenth-container all-block">
+            <div class="tenth-container-sort linehight35 fontsize14">
+                類別
+                <div>
+                    <span class="fontsize14"><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+            </div>
+            <div class="tenth-container-sort linehight35 fontsize14">
+                更多
+                <div>
+                    <span class="fontsize14"><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+            </div>
+            <div class="tenth-container-sort linehight35 fontsize14">
+                品牌
+                <div>
+                    <span class="fontsize14"><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+            </div>
+            <div class="tenth-container-sort linehight35 fontsize14">
+                網店
+                <div>
+                    <span class="fontsize14"><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+            </div>
+            <div class="tenth-container-sort linehight35 fontsize14">
+                其他網站
+                <div>
+                    <span class="fontsize14"><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+            </div>
+            <div class="tenth-container-sort linehight35 fontsize14">
+                Hypebeast Ltd.
+                <div>
+                    <span class="fontsize14"><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+            </div>
+            <div class="tenth-container-sort linehight35 fontsize14">
+                關注我們
+                <div>
+                    <span class="fontsize14"><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- tenth section  桌機板  -->
+    <section class="desktop-tenth-container">
+        <div class="tenth-container all-block">
+            <div class="tenth-container-icon">
+                <div class="  linehight35 fontsize14">
+                    類別
+                    <div>
+                        <span class="colorgray fontsize12">時裝
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">球鞋
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">音樂
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">藝文
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">科技
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">汽車
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">娛樂
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">設計
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">飲食
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">遊戲
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">旅遊
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">體育
+                    </div>
+                </div>
+            </div>
+
+            <div class="tenth-container-icon">
+                <div class="  linehight35 fontsize14">
+                    更多
+                    <div>
+                        <span class="colorgray fontsize12">專題
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">影片
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tenth-container-icon">
+                <div class="  linehight35 fontsize14">
+                    品牌
+                    <div>
+                        <span class="colorgray fontsize12">品牌排名
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">目錄
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tenth-container-icon">
+                <div class="  linehight35 fontsize14">
+                    網店
+                    <div>
+                        <span class="colorgray fontsize12">男裝
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">女裝
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">生活
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">中古貨品
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">最新發售
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">折扣商品
+                    </div>
+                </div>
+            </div>
+
+            <div class="tenth-container-icon">
+                <div class="  linehight35 fontsize14">
+                    其他網站
+                    <div>
+                        <span class="colorgray fontsize12">Hypebeast
+                        </span>
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">Hypebae
+                        </span>
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">HBX
+
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">HypeJobs
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">The Berrics
+                    </div>
+                </div>
+            </div>
+
+            <div class="tenth-container-icon">
+                <div class="  linehight35 fontsize14">
+                    Hypebeast Ltd.
+                    <div>
+                        <span class="colorgray fontsize12">關於我們
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">企業新聞
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">投資者關係
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">聯絡方式
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">廣告業務
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">工作機會
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">Hypemaker
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12">HypeCapital
+                    </div>
+                </div>
+            </div>
+
+            <div class="tenth-container-icon">
+                <div class="  linehight35 fontsize14">
+                    關注我們
+                    <div>
+                        <span class="colorgray fontsize12"><i class="fa-brands fa-facebook-f"></i></span>
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12"><i class="fa-brands fa-twitter"></i></span>
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12"><i class="fa-brands fa-instagram"></i></span>
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12"><i class="fa-brands fa-youtube"></i></span>
+                    </div>
+                    <div>
+                        <span class="colorgray fontsize12"><i class="fa-solid fa-rss"></i></span>
+                    </div>
+                </div>
+    </section>
+
+
+
+
+    <footer >
+        <div>
+            <div class="all-block textaligncenter fontsize12 colorgray footerblock">
+                <div footerblock-1>
+                    <div class="footerblock-1">
+                        <p>2022 Hypebeast Limited .All Rights Reserved.</p>
+                        <p>
+                            HYPEBEAST® is a registered trademark of Hypebeast Hong
+                            Kong Ltd.
+                        </p>
+                    </div>
+                    <div class="lineheight48">
+                        <div class="footerblock-2">
+                            <p class="lineheight30 paddingright10">  網站聲明</p>
+                            <p class="lineheight30 paddingright10">|</p>
+                            <p class="lineheight30 paddingright10"> 隱私政策</p>
+                            <p class="lineheight30 paddingright10">|</p>
+                            <p class="lineheight30 paddingright10"> GDPR</p>
+                            <p class="lineheight30 paddingright10">|</p>
+                            <p class="lineheight30"> Investment Disclaimer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footerblock-3">
+                    <p class="colorwhite">繁體中文</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
